@@ -24,30 +24,19 @@
   <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/components/dropdown.css">
   <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/components/icon.css">
 
-  <style type="text/css">
-  body {
-    height: auto !important;
-  }
-  .ui.menu .item img.logo {
-    margin-right: 1.5em;
-  }
-  .main.container {
-    margin-top: 2em;
-  }
-  .wireframe {
-    margin-top: 2em;
-  }
-  .ui.footer.segment {
-    margin: 5em 0em 0em;
-    padding: 5em 0em;
-  }
-
-  ul > li {
-    word-wrap: break-word;
-  }
-  </style>
+  <link href="https://pulipulichen.github.io/course-indexing-and-abstracting/html_assets/global.css" rel="stylesheet">
+  <link href="https://pulipulichen.github.io/course-indexing-and-abstracting/html_assets/toc.css" rel="stylesheet">
 </head>
 <body>
+  <nav class="toc">
+    <ul>
+      {{ TOC }}
+    </ul>
+    <svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+      <path stroke="#444" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
+    </svg>
+  </nav>
+
   <div class="ui main text container">
     <div class="ui segment">
 
@@ -55,6 +44,8 @@
 
     </div>
   </div>
+
+  <script src="https://pulipulichen.github.io/course-indexing-and-abstracting/html_assets/toc.js"></script>
 </body>
 
 </html>
