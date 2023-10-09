@@ -18,3 +18,15 @@ body {
 ul > li {
   word-wrap: break-word;
 }
+
+/* ------------------ */
+
+.main-heading > .entry {
+  text-indent: -4em;
+  margin-left: 4em;
+}
+
+.subheading > .entry {
+  text-indent: -2em;
+  margin-left: 4em;
+}
