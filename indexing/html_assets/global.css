@@ -35,6 +35,10 @@ h3 {
   margin-left: 4em;
 }
 
+.entry a[href] {
+  text-decoration: underline !important;
+}
+
 .main-heading {
   margin-bottom: 0.5em;
 }
