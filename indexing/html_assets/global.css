@@ -38,3 +38,13 @@ h3 {
 .main-heading {
   margin-bottom: 0.5em;
 }
+
+/* ------------------ */
+
+.comment.negative {
+  color: #e63946;
+}
+
+.comment.positive {
+  color: #2a9d8f;
+}
