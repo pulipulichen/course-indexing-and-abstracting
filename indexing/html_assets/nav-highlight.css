@@ -1,4 +1,8 @@
+[id][name] {
+  background-color: #FFFFFF;
+  transition: background-color 1s ease-in-out;
+}
 .highlight {
-  background-color: yellow;
-  transition: background-color 0.5s ease;
+  background-color: #FFFF00 !important;
+  transition-duration: 0.2s;
 }

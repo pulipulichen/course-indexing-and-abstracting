@@ -7,12 +7,23 @@ setTimeout(function() {
       e.preventDefault();
 
       let targetID = this.href
-      if (targetID.startsWith('#')) {
-        targetID = targetID.slice(1)
+      let hashPos = targetID.indexOf('#')
+      if (hashPos > -1) {
+        targetID = targetID.slice(hashPos + 1)
       }
-
+      console.log(targetID)
       let targetElement = document.getElementById(targetID)
-      targetElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+      targetElement.scrollIntoView({ 
+        behavior: "smooth", 
+        block: "center", 
+        inline: "center" 
+      });
+
+      // remove all other highlight
+      let highlightElements = document.querySelectorAll('.highlight')
+      for (let i = 0; i < highlightElements.length; i++) {
+        highlightElements[i].classList.remove('highlight')
+      }
 
       targetElement.classList.add("highlight")
       setTimeout(() => {
