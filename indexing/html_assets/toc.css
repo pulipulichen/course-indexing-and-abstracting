@@ -1,6 +1,6 @@
 .toc {
   position: fixed;
-  left: 3em;
+  left: 0em;
   top: 5em;
   padding: 1em;
   width: 14em;
@@ -12,6 +12,10 @@
   margin: 0;
 }
 .toc ul ul { padding-left: 2em; }
+
+.toc li {
+
+}
 .toc li a {
   display: inline-block;
   color: #aaa;
@@ -20,8 +24,9 @@
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 
   margin-left: 1rem;
-  text-indent: -1rem;
+  text-indent: -0.5rem;
 }
+
 .toc li.visible > a {
   color: #111;
   -webkit-transform: translate(5px);
