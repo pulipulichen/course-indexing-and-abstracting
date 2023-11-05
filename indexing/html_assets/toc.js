@@ -97,3 +97,37 @@ function sync() {
     tocPath.setAttribute( 'opacity', 0 );
   }
 }
+
+// ----------------------------------------------------------------
+
+function createTOCTable () {
+  let classList = document.querySelectorAll(`h3[id^="index_toc_"]`)
+
+  const ul = document.createElement('ul');
+  ul.classList.add('class-list');
+
+  for (let i = 0; i < classList.length; i++) {
+    let classItem = classList[i]
+    let text = classItem.innerText.trim()
+    let id = classItem.id
+
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.innerText = text
+    a.href = "#" + id
+    li.appendChild(a)
+    ul.appendChild(li)
+  }
+
+  // Append the unordered list to the body of the HTML document
+  // document.body.appendChild(ul)
+  // Find the element with the ID "index"
+  const indexElement = document.getElementById('index');
+
+  // Insert the unordered list after the element with the ID "index"
+  indexElement.insertAdjacentElement('afterend', ul);
+}
+
+setTimeout(() => {
+  createTOCTable()
+}, 0)
