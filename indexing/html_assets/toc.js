@@ -125,7 +125,9 @@ function createTOCTable () {
   const indexElement = document.getElementById('index');
 
   // Insert the unordered list after the element with the ID "index"
-  indexElement.insertAdjacentElement('afterend', ul);
+  if (classList.length > 0) {
+    indexElement.insertAdjacentElement('afterend', ul);
+  }
 }
 
 setTimeout(() => {
