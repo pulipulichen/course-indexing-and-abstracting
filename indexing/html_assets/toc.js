@@ -113,7 +113,7 @@ function createTOCTable () {
 
     let text = classItem.innerText.trim()
     if (entryCount > 0) {
-      text = text + ` ${entryCount}`
+      text = text + ` (${entryCount})`
     }
     let id = classItem.id
 
