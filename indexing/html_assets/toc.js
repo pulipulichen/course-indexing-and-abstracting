@@ -108,7 +108,13 @@ function createTOCTable () {
 
   for (let i = 0; i < classList.length; i++) {
     let classItem = classList[i]
+
+    let entryCount = classItem.parentNode.querySelectorAll('.main-heading,.subheading').length
+
     let text = classItem.innerText.trim()
+    if (entryCount > 0) {
+      text = text + ` ${entryCount}`
+    }
     let id = classItem.id
 
     const li = document.createElement('li');
